@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as382</title>
+    <style>
+        .header {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+          background-color: #fff;
+          padding: 10px 20px;
+          border-radius: 5px;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         text-align: center;
+         font-size: 1.5em;
+         color: #4CAF50;
+         z-index: 1000; /* Garante que o cabeçalho fique sobre os outros elementos */
+}
+
+.container {
+         margin-top: 60px; /* Ajuste conforme necessário para deixar espaço suficiente para o cabeçalho */
+         /* Seu estilo existente para o contêiner */
+}
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #results, #additional-results, #third-results, #fourth-results, #fifth-results, #sixth-results, #seventh-results, #eighth-results, #ninth-results, #ten-results, #eleven-results, #twelve-results, #thirteen-results, #fourteen-results {
+            margin-top: 20px;
+        }
+        #results p, #additional-results p, #third-results p, #fourth-results p, #fifth-results p, #sixth-results p, #seventh-results p, #eighth-results p, #ninth-results p, #ten-results p, #eleven-results p, #twelve-results p, #thirteen-results p, #fourteen-results p {
+            background-color: #e7f3fe;
+            color: #31708f;
+            padding: 10px;
+            border-radius: 3px;
+            margin: 5px 0;
+        }
+        h1{
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">Sorteio de Números Aleatórios</h1>
+    <div class="container">
+        <button onclick="sortearNumeros()">Sortear Números de 2,85 a 3,05</button>
+        <button onclick="sortearNumerosAdicionais()">Sortear Números de 7,000 a 7,018</button>
+        <button onclick="sortearNumerosTerceiros()">Sortear Números de 12,40 a 12,60</button>
+        <button onclick="sortearNumerosQuartos()">Sortear Números de 39,910 a 39,930</button>
+        <button onclick="sortearNumerosQuintos()">Sortear Números de 13,467 a 13,507</button>
+        <button onclick="sortearNumerosSextos()">Sortear Números de 23,360 a 23,400</button>
+        <button onclick="sortearNumerosSetimos()">Sortear Números de 5,080 a 5,120</button>
+        <button onclick="sortearNumerosOitavos()">Sortear Números de 39,000 a 39,039</button>
+        <button onclick="sortearNumerosNovenos()">Sortear Números de 37,000 a 37,039</button>
+        <button onclick="sortearNumerosDecimos()">Sortear Números de 29,40 a 29,55</button>
+        <button onclick="sortearNumerosDecimoprimeiro()">Sortear Números de 14,95 a 15,35</button>
+        <button onclick="sortearNumerosDecimosegundo()">Sortear Números de 3,00 a 3,20</button>
+        <button onclick="sortearNumerosDecimoterceiro()">Sortear Números de 8,80 a 9,20</button>
+        <button onclick="sortearNumerosDecimoquarto()">Sortear Números de 2,50 a 2,60</button>
+        <div id="results"></div>
+        <div id="additional-results"></div>
+        <div id="third-results"></div>
+        <div id="fourth-results"></div>
+        <div id="fifth-results"></div>
+        <div id="sixth-results"></div>
+        <div id="seventh-results"></div>
+        <div id="eighth-results"></div>
+        <div id="ninth-results"></div>
+        <div id="ten-results"></div>
+        <div id="eleven-results"></div>
+        <div id="twelve-results"></div>
+        <div id="thirteen-results"></div>
+        <div id="fourteen-results"></div>
+    </div>
+    <script>
+        function sortearNumeros() {
+            const minValue = 2.85;
+            const maxValue = 3.05;
+            const numberOfRandomNumbers = 4;
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(2);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                resultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosAdicionais() {
+            const minValue = 7.000;
+            const maxValue = 7.018;
+            const numberOfRandomNumbers = 8;
+            const additionalResultsDiv = document.getElementById('additional-results');
+            additionalResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(3);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                additionalResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosTerceiros() {
+            const minValue = 12.40;
+            const maxValue = 12.60;
+            const numberOfRandomNumbers = 4;
+            const thirdResultsDiv = document.getElementById('third-results');
+            thirdResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(2);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                thirdResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosQuartos() {
+            const minValue = 39.910;
+            const maxValue = 39.930;
+            const numberOfRandomNumbers = 8;
+            const fourthResultsDiv = document.getElementById('fourth-results');
+            fourthResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(3);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                fourthResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosQuintos() {
+            const minValue = 13.467;
+            const maxValue = 13.507;
+            const numberOfRandomNumbers = 4;
+            const fifthResultsDiv = document.getElementById('fifth-results');
+            fifthResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(3);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                fifthResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosSextos() {
+            const minValue = 23.360;
+            const maxValue = 23.400;
+            const numberOfRandomNumbers = 4;
+            const sixthResultsDiv = document.getElementById('sixth-results');
+            sixthResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(3);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                sixthResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosSetimos() {
+            const minValue = 5.080;
+            const maxValue = 5.120;
+            const numberOfRandomNumbers = 4;
+            const seventhResultsDiv = document.getElementById('seventh-results');
+            seventhResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(3);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                seventhResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosOitavos() {
+            const minValue = 39.000;
+            const maxValue = 39.039;
+            const numberOfRandomNumbers = 4;
+            const eighthResultsDiv = document.getElementById('eighth-results');
+            eighthResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(3);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                eighthResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosNovenos() {
+            const minValue = 37.000;
+            const maxValue = 37.039;
+            const numberOfRandomNumbers = 4;
+            const ninthResultsDiv = document.getElementById('ninth-results');
+            ninthResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(3);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                ninthResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosDecimos() {
+            const minValue = 29.40;
+            const maxValue = 29.55;
+            const numberOfRandomNumbers = 2;
+            const tenResultsDiv = document.getElementById('ten-results');
+            tenResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(2);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                tenResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosDecimoprimeiro() {
+            const minValue = 14.95;
+            const maxValue = 15.35;
+            const numberOfRandomNumbers = 2;
+            const elevenResultsDiv = document.getElementById('eleven-results');
+            elevenResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(2);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                elevenResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosDecimosegundo() {
+            const minValue = 3.00;
+            const maxValue = 3.20;
+            const numberOfRandomNumbers = 2;
+            const twelveResultsDiv = document.getElementById('twelve-results');
+            twelveResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(2);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                twelveResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosDecimoterceiro() {
+            const minValue = 8.80;
+            const maxValue = 9.20;
+            const numberOfRandomNumbers = 2;
+            const thirteenResultsDiv = document.getElementById('thirteen-results');
+            thirteenResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(2);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                thirteenResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function sortearNumerosDecimoquarto() {
+            const minValue = 2.50;
+            const maxValue = 2.60;
+            const numberOfRandomNumbers = 2;
+            const fourteenResultsDiv = document.getElementById('fourteen-results');
+            fourteenResultsDiv.innerHTML = '';
+
+            for (let i = 0; i < numberOfRandomNumbers; i++) {
+                const randomNumber = (Math.random() * (maxValue - minValue) + minValue).toFixed(2);
+                const p = document.createElement('p');
+                p.textContent = randomNumber;
+                fourteenResultsDiv.appendChild(p);
+            }
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
